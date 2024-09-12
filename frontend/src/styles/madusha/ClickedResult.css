@@ -1,0 +1,23 @@
+.items-container-mad{
+    display:inline-block;
+    width: 40%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    box-shadow: 10px;
+    align-self: left;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 5px rgba(45, 45, 45, 0.3);
+    background-image: linear-gradient(to bottom, #ffffff, #efeeec);
+}
+
+.selected-container{
+    float: right;
+    width: 55%;
+    box-shadow: 10px;
+    padding: 10px;
+}
+
+.sub-heading{
+    font-size: 20px;
+    font-weight: bold;
+}

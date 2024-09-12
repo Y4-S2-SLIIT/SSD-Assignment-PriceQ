@@ -1,0 +1,17 @@
+.dialog-btn{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    margin: 2px;
+    color: white;
+}
+
+.showdialog-container{
+    display: right;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 5px rgba(45, 45, 45, 0.3);
+}

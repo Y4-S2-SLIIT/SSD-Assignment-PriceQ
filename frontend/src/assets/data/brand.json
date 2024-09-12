@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "H&M"
+    },
+    {
+        "id": 2,
+        "name": "Zara"
+    },
+    {
+        "id": 3,
+        "name": "Nike"
+    },
+    {
+        "id": 4,
+        "name": "Under Armour"
+    },
+    {
+        "id": 5,
+        "name": "Adidas"
+    },
+    {
+        "id": 6,
+        "name": "Puma"
+    },
+    {
+        "id": 7,
+        "name": "Reebok"
+    },
+    {
+        "id": 8,
+        "name": "Nike"
+    },
+    {
+        "id": 9,
+        "name": "Levis"
+    },
+    {
+        "id": 10,
+        "name": "Tommy Hilfiger"
+    },
+    {
+        "id": 11,
+        "name": "Ralph Lauren"
+    },
+    {
+        "id": 12,
+        "name": "Lacoste"
+    },
+    {
+        "id": 13,
+        "name": "Calvin Klein"
+    },
+    {
+        "id": 14,
+        "name": "Gucci"
+    },
+    {
+        "id": 15,
+        "name": "Prada"
+    },
+    {
+        "id": 16,
+        "name": "Versace"
+    },
+    {
+        "id": 17,
+        "name": "Armani"
+    },
+    {
+        "id": 18,
+        "name": "Chanel"
+    },
+    {
+        "id": 19,
+        "name": "Burberry"
+    },
+    {
+        "id": 20,
+        "name": "Dior"
+    },
+    {
+        "id": 21,
+        "name": "Unbranded"
+    }
+]

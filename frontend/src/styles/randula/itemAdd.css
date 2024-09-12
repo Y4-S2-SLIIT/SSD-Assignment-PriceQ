@@ -1,0 +1,68 @@
+.items-container {
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: auto;
+}
+
+.items-add-container {
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: auto;
+}
+
+.barcodeContainer {
+  background-color: #ffffffdc;
+  width: 90%;
+  padding: 20px;
+  margin-top: 230px;
+}
+
+.col1 {
+  background-color: #007bff51;
+  /* Change background color to a blue shade */
+  color: #fff;
+  /* Set text color to white */
+  padding: 20px;
+  /* Add padding for better spacing */
+  border-radius: 5px;
+  /* Add rounded corners */
+  max-height: 700px;
+}
+
+
+.barcodeImage {
+  width: 100%;
+  /* Make the barcode image responsive */
+  max-width: 300px;
+  /* Set a maximum width to avoid excessive scaling */
+  display: block;
+  /* Remove default inline display */
+  margin: 0 auto;
+  /* Center the image */
+}
+
+/* Style the buttons */
+.custom-button {
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 10px;
+  /* Add some spacing between buttons */
+  border: none;
+  /* Remove button border */
+  padding: 10px 20px;
+  /* Add padding to buttons */
+  border-radius: 5px;
+  /* Add rounded corners */
+  cursor: pointer;
+  /* Add a pointer cursor */
+}
+
+/* Add hover effect to buttons */
+.custom-button:hover {
+  background-color: #0056b3;
+  /* Darker shade of blue on hover */
+}

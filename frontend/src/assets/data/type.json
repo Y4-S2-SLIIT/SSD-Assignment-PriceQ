@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "T-Shirt"
+    },
+    {
+        "id": 2,
+        "name": "Shirt"
+    },
+    {
+        "id": 3,
+        "name": "Polo Shirt"
+    },
+    {
+        "id": 4,
+        "name": "Sweater"
+    },
+    {
+        "id": 5,
+        "name": "Hoodie"
+    },
+    {
+        "id": 6,
+        "name": "Jacket"
+    },
+    {
+        "id": 7,
+        "name": "Jeans"
+    },
+    {
+        "id": 8,
+        "name": "Shorts"
+    },
+    {
+        "id": 9,
+        "name": "Skirt"
+    },
+    {
+        "id": 10,
+        "name": "Dress"
+    },
+    {
+        "id": 11,
+        "name": "Socks"
+    },
+    {
+        "id": 12,
+        "name": "Underwear"
+    },
+    {
+        "id": 13,
+        "name": "Bra"
+    },
+    {
+        "id": 14,
+        "name": "Shoes"
+    },
+    {
+        "id": 15,
+        "name": "Boots"
+    },
+    {
+        "id": 16,
+        "name": "Sandals"
+    },
+    {
+        "id": 17,
+        "name": "Slippers"
+    },
+    {
+        "id": 18,
+        "name": "Hat"
+    },
+    {
+        "id": 19,
+        "name": "Gloves"
+    },
+    {
+        "id": 20,
+        "name": "Scarf"
+    },
+    {
+        "id": 21,
+        "name": "Jewelry"
+    }
+]

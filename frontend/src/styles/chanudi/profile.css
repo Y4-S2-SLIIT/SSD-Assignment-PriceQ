@@ -1,0 +1,42 @@
+.profileContainer {
+  width: 80%;
+  border: 0px;
+  margin: 0 auto;
+  margin-top: 190px;
+  height: 60vh;
+  /* border: 1px solid black; */
+}
+
+.colmn1 {
+  background-color: rgba(122, 135, 185, 0.523);
+
+  /* Change background color to a blue shade */
+  color: #fff;
+  /* Set text color to white */
+  padding: 20px;
+  /* Add padding for better spacing */
+  border-radius: 5px;
+  /* Add rounded corners */
+  height: 60vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userImg {
+  max-width: 80%;
+}
+
+.colmn2 {
+  padding: 20px;
+  /* Add padding for better spacing */
+  background-color: rgba(160, 165, 185, 0.523);
+  height: 100%;
+  height: 60vh;
+}
+
+.header {
+  background-color: rgba(1, 14, 70, 0.523);
+  color: white;
+}

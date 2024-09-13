@@ -1,0 +1,60 @@
+/* Add this CSS to your component's stylesheet */
+.items-container-main {
+  padding: 20px;
+  margin-top: 70px;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 120px;
+  /* Adjust to give space below the Navbar */
+}
+
+.item-list {
+  margin-top: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style the "Add New Item" button */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.itemTableHead thead th {
+  position: sticky;
+  z-index: 10;
+}
+
+/* Add more styling as needed */

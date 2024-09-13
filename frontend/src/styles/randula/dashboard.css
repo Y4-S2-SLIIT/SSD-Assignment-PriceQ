@@ -1,0 +1,73 @@
+body::before {
+    content: "";
+    background-image: url('../../assets/images/cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px); /* Adjust the blur value (5px in this example) */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+}
+
+body {
+    /* Your content styles here */
+    margin: 0;
+    padding: 0;
+}
+
+
+.dashboardContainer {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 500px;
+    background-color: aqua;
+    /* background-image: url('../../assets/images/cover.avif'); */
+}
+
+img.dashimg {
+    max-width: 50%;
+    max-height: 80%;
+    margin: 0 auto;
+}
+
+.dashcol {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.dashcol:hover {
+    transform: scale(1.05);
+    filter: grayscale(100%);
+}
+
+.odd {
+    background-color: rgb(160, 160, 160);
+}
+
+.even {
+    background-color: rgb(228, 228, 228);
+}
+
+h1.dashh1 {
+    font-size: 3vw;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.cardImage {
+    width: 100px;
+    /* Adjust the width to your preference */
+    height: 100px;
+    /* Adjust the height to maintain the aspect ratio */
+}
+
+Table.ItemTable {
+    width: 100%;
+}

@@ -1,0 +1,60 @@
+/* Styling for the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f07e;
+  /* Background color */
+}
+
+/* Styling for the form */
+.form-group {
+  margin: 10px;
+  text-align: left;
+  width: 300px;
+}
+
+/* Styling for labels */
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Styling for input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Styling for invalid feedback */
+.invalid-feedback {
+  color: #ff0000;
+  /* Red color for error messages */
+}
+
+/* Styling for the submit button */
+button[type="submit"] {
+  background-color: #007bff;
+  /* Blue color for the button */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the submit button */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}

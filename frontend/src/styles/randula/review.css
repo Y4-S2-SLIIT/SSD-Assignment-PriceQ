@@ -1,0 +1,25 @@
+.reviewContainer {
+    width: 80%;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 150px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgba(1, 14, 70, 0.223);
+}
+
+.centered-card {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 10px;
+}
+
+img.reviewImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}

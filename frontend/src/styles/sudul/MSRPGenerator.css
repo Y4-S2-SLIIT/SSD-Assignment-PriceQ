@@ -1,0 +1,260 @@
+/* MSRPGenerator.css */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 100px;
+  font-family: 'Montserrat';
+}
+
+.msrp-container {
+  display: flex;
+  justify-content: space-between;
+  /* Place the elements in a row with space between them */
+  max-width: 1400px;
+  /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  min-width: 700px;
+  font-family: 'Montserrat';
+  background-color: #fff6;
+  border-radius: 5px;
+  box-shadow: 5px 6px 5px rgba(5, 221, 203, 0.382);
+}
+/* MSRP generator container styles (left) */
+.msrp-gen-container {
+  background-color: #d4d181c5;
+  flex: 1;
+  padding: 20px;
+  min-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat';
+}
+
+/* Input container styles */
+.input-container {
+  margin-bottom: 15px;
+}
+
+/* Label styles */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Montserrat';
+}
+
+/* Input field styles */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Button styles */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Result container styles */
+.result-container {
+  margin-top: 20px;
+  font-family: 'Montserrat';
+  font-size: x-large;
+}
+
+/* MSRP value styles */
+.msrp-value {
+  font-family: 'JetBrains Mono';
+  font-size: 40px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+/* Graph container styles (right) */
+.graph-msrp {
+  background-color: #ffffff6c;
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  min-width: 700px;
+}
+
+.change-retail-price {
+  background-color: #fff6;
+  border-radius: 5px;
+  box-shadow: 3px 4px 5px rgba(5, 221, 88, 0.541);
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  /* Add additional styling as needed */
+}
+
+.heading-msrp {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Montserrat';
+  font-size: xx-large;
+  color: #0a051c;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.form-group-msrp {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  /* Adjust the margin as needed */
+}
+
+/* Label styles for the form group */
+.form-group-msrp label {
+  flex: 1;
+  margin-right: 10px;
+  /* Adjust the margin as needed for spacing */
+  font-weight: bold;
+  width: fit-content;
+}
+
+/* Input styles for the form group */
+.form-group-msrp input[type="float"] {
+  text-align: center;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+  /* Ensure the input takes up the available width */
+  -webkit-appearance: none;
+  /* Remove default styling for WebKit browsers */
+  -moz-appearance: textfield;
+  /* Display as a text field in Firefox */
+}
+
+/* Apply styles to the number input for Firefox */
+.form-group-msrp input[type="float"]::-webkit-inner-spin-button,
+.form-group-msrp input[type="float"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  /* Remove the spinners in WebKit browsers */
+  appearance: none;
+  /* Remove the spinners in non-WebKit browsers */
+}
+
+.button-container-msrp {
+  text-align: center;
+  margin-top: 10px;
+  /* Adjust the margin as needed */
+}
+
+.button-container-msrp input[type="submit"] {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  background-color: #34d072;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+  border: transparent;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.button-container-msrp input[type="submit"]:hover {
+  font-family: 'Montserrat';
+  background-color: #0c5bb0;
+  color: #ffffff;
+}
+
+.red-msrp-desc {
+  font-size: small;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  color: rgb(124, 37, 37)
+}
+
+.msrp-item-details-container {
+  background-color: #fff6;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 3px 4px 5px rgba(215, 163, 8, 0.541);
+}
+
+.msrp-item-details {
+  display: flex;
+  justify-content: space-between;
+  /* Place the elements in a row with space between them */
+  max-width: 1400px;
+  /* Adjust the maximum width as needed */
+  margin: 0 auto;
+  min-width: 700px;
+  font-family: 'Montserrat';
+}
+
+.msrp-item-details-container h2 {
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.msrp-item-details-left {
+  background-color: #d6a7af57;
+  flex: 1;
+  padding: 20px;
+  min-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: medium;
+}
+
+.msrp-item-details-left h3 {
+  font-family: 'Montserrat';
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.msrp-item-details-left img {
+  max-width: 300px;
+}
+
+.msrp-item-details-right {
+  background-color: #d3d3d357;
+  flex: 1;
+  padding: 20px;
+  min-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: medium;
+}
+.gen-button {
+  margin: 10px;
+  margin-bottom: 0px;
+  background-color: #900d0d;
+  cursor: pointer;
+}
+
+.gen-button:hover {
+  background-color: #ac6705;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+.gen-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}

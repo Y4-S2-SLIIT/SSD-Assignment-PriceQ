@@ -83,7 +83,7 @@ export default function profile() {
       const data = {
         firstName: values.firstName,
         lastName: values.lastName,
-        email: values.email,
+        email: values.email.toLowerCase(),
         contactNo: values.contactNo,
         image: url,
       };
@@ -282,6 +282,7 @@ export default function profile() {
                             "form-control" +
                             (errors.email && touched.email ? " is-invalid" : "")
                           }
+                          disabled
                         />
                         <div className="invalid-feedback">{errors.email}</div>
                       </div>
@@ -378,69 +379,66 @@ export default function profile() {
             <Col>
               <Card style={{ width: "22rem" }}>
                 <Card.Body>
-                  <Card.Title>Update Password</Card.Title>
-                  <Formik
-                    initialValues={{
-                      password: "",
-                      confirmPassword: "",
-                    }}
-                    validationSchema={UpdatePasswordSchema}
-                    onSubmit={(values) => {
-                      updatePassword(values);
-                    }}
-                  >
-                    {({ errors, touched }) => (
-                      <Form>
-                        {/* password */}
-                        <div className="form-group col-md-6">
-                          <label htmlFor="password">Password</label>
-                          <Field
-                            name="password"
-                            type="password"
-                            className={
-                              "form-control" +
-                              (errors.password && touched.password
-                                ? " is-invalid"
-                                : "")
-                            }
-                          />
-                          <div className="invalid-feedback">
-                            {errors.password}
-                          </div>
-                        </div>
+                  {!user.isoAuth && (
+                    <>
+                      <Card.Title>Update Password</Card.Title><Formik
+                        initialValues={{
+                          password: "",
+                          confirmPassword: "",
+                        }}
+                        validationSchema={UpdatePasswordSchema}
+                        onSubmit={(values) => {
+                          updatePassword(values);
+                        }}
+                      >
+                        {({ errors, touched }) => (
+                          <Form>
+                            {/* password */}
+                            <div className="form-group col-md-6">
+                              <label htmlFor="password">Password</label>
+                              <Field
+                                name="password"
+                                type="password"
+                                className={"form-control" +
+                                  (errors.password && touched.password
+                                    ? " is-invalid"
+                                    : "")} />
+                              <div className="invalid-feedback">
+                                {errors.password}
+                              </div>
+                            </div>
 
-                        {/* confirm password */}
-                        <div className="form-group col-md-6">
-                          <label htmlFor="confirmPassword">
-                            Confirm Password
-                          </label>
-                          <Field
-                            name="confirmPassword"
-                            type="password"
-                            className={
-                              "form-control" +
-                              (errors.confirmPassword && touched.confirmPassword
-                                ? " is-invalid"
-                                : "")
-                            }
-                          />
-                          <div className="invalid-feedback">
-                            {errors.confirmPassword}
-                          </div>
-                        </div>
+                            {/* confirm password */}
+                            <div className="form-group col-md-6">
+                              <label htmlFor="confirmPassword">
+                                Confirm Password
+                              </label>
+                              <Field
+                                name="confirmPassword"
+                                type="password"
+                                className={"form-control" +
+                                  (errors.confirmPassword && touched.confirmPassword
+                                    ? " is-invalid"
+                                    : "")} />
+                              <div className="invalid-feedback">
+                                {errors.confirmPassword}
+                              </div>
+                            </div>
 
-                        <br />
-                        <div className="form-group">
-                          <button
-                            type="submit"
-                            className="btn btn-primary mr-2"
-                          >
-                            Update Password
-                          </button>
-                        </div>
-                      </Form>
-                    )}
-                  </Formik>
+                            <br />
+                            <div className="form-group">
+                              <button
+                                type="submit"
+                                className="btn btn-primary mr-2"
+                              >
+                                Update Password
+                              </button>
+                            </div>
+                          </Form>
+                        )}
+                      </Formik>
+                    </>
+                  )}
                 </Card.Body>
               </Card>
             </Col>

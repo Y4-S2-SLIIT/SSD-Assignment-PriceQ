@@ -94,4 +94,20 @@ public class UserController {
         }
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
+
+    @GetMapping("/email/{email}")
+    public ResponseEntity<Map> getUserByEmail(@PathVariable String email){
+        Optional<User> user = service.getUserByEmail(email);
+        Map<String, Object> response = new HashMap<>();
+        if(user.isPresent()){
+            response.put("status", true);
+            response.put("message", "Success");
+            response.put("data", user);
+        }else{
+            response.put("status", false);
+            response.put("message", "NoUser");
+            response.put("data", null);
+        }
+        return ResponseEntity.status(HttpStatus.OK).body(response);
+    }
 }

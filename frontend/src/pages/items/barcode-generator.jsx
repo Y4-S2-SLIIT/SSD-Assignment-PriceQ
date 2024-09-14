@@ -32,6 +32,8 @@ export default function barcodegenerator() {
   async function handleBarcodeSaveAndToMSRPGenerator() {
     await handleBarcodeSave().then(() => {
       window.location.href = `/msrp-generator/${itemID}`;
+    }).catch((err) => {
+      console.log(err);
     });
   }
 
@@ -82,6 +84,8 @@ export default function barcodegenerator() {
               timer: 1500,
             }).then(() => {
               window.location.href = `/items-main/`;
+            }).catch((err) => {
+              console.log(err);
             });
           })
           .catch((error) => {

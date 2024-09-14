@@ -224,7 +224,9 @@ const handleUpdateDiscount = () => {
         } else if (result.isDenied) {
           Swal.fire('Purchase Denied', '', 'info')
         }
-      })
+      }).catch((err) => {
+        console.log(err);
+      });
 
   }
 
@@ -351,7 +353,7 @@ const handleUpdateDiscount = () => {
             )}
             <div className="sales-summary-report-button-container">
               <Link to="/sales-summary-report">
-              <button class="sales-summary-report-button" >Sales Summary Report</button>
+              <button className="sales-summary-report-button" >Sales Summary Report</button>
               </Link>
           </div>
       </div>

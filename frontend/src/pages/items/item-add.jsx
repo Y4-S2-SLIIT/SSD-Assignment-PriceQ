@@ -104,7 +104,9 @@ export default function addItems() {
                             timer: 1500,
                         }).then(() => {
                             window.location.href = `/barcode-generator/${res.data.id}`;
-                        });
+                        }).catch((err) => {
+                            console.log(err);
+                          });
                     })
                     .catch((err) => {
                         console.log(err);
@@ -114,7 +116,9 @@ export default function addItems() {
                             text: "Something went wrong!",
                         });
                     });
-            })
+            }).catch((err) => {
+                console.log(err);
+              });
     }
 
     return (

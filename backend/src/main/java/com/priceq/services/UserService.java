@@ -67,6 +67,10 @@ public class UserService {
             }
         }
     }
+
+    public Optional<User> getUserByEmail(String email){
+        return Optional.ofNullable(repository.findByEmail(email));
+    }
 }
 
 

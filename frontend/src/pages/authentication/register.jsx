@@ -85,6 +85,8 @@ function Register() {
               .catch((err) => {
                 console.log(err);
               });
+          }).catch((err) => {
+            console.log(err);
           });
         })
         .catch((err) => {
@@ -96,6 +98,8 @@ function Register() {
             footer: "Your Email or Contact Number already exist!!",
           });
         });
+    }).catch((err) => {
+      console.log(err);
     });
   }
 

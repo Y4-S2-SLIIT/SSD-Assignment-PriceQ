@@ -74,6 +74,8 @@ export default function reviews() {
       .get(`${import.meta.env.VITE_BACKEND_URL}/review/getNew`)
       .then((res) => {
         setNewReviews(res.data);
+      }).catch((err) => {
+        console.log(err);
       });
   }, []);
 
@@ -88,12 +90,16 @@ export default function reviews() {
         setReviewCount(reviewCountCheck);
         console.log(reviewCountCheck);
         console.log(reviewCount);
+      }).catch((err) => {
+        console.log(err);
       });
   }, []);
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_BACKEND_URL}/review/`).then((res) => {
       setReviews(res.data);
+    }).catch((err) => {
+      console.log(err);
     });
   }, []);
 
@@ -104,7 +110,9 @@ export default function reviews() {
         return a.brand.localeCompare(b.brand);
       });
       setItems(sortedProducts);
-    });
+    }).catch((err) => {
+      console.log(err);
+    });;
   }, []);
 
   const reviewSchema = Yup.object().shape({
@@ -138,13 +146,19 @@ export default function reviews() {
               .get(`${import.meta.env.VITE_BACKEND_URL}/review/`)
               .then((res) => {
                 setReviews(res.data);
+              }).catch((err) => {
+                console.log(err);
               });
 
             axios
               .get(`${import.meta.env.VITE_BACKEND_URL}/review/getNew`)
               .then((res) => {
                 setNewReviews(res.data);
+              }).catch((err) => {
+                console.log(err);
               });
+          }).catch((err) => {
+            console.log(err);
           });
         }
       })
@@ -185,13 +199,19 @@ export default function reviews() {
             .get(`${import.meta.env.VITE_BACKEND_URL}/review/`)
             .then((res) => {
               setReviews(res.data);
+            }).catch((err) => {
+              console.log(err);
             });
 
           axios
             .get(`${import.meta.env.VITE_BACKEND_URL}/review/getNew`)
             .then((res) => {
               setNewReviews(res.data);
+            }).catch((err) => {
+              console.log(err);
             });
+        }).catch((err) => {
+          console.log(err);
         });
       })
       .catch((err) => {
@@ -233,13 +253,19 @@ export default function reviews() {
             .get(`${import.meta.env.VITE_BACKEND_URL}/review/`)
             .then((res) => {
               setReviews(res.data);
+            }).catch((err) => {
+              console.log(err);
             });
 
           axios
             .get(`${import.meta.env.VITE_BACKEND_URL}/review/getNew`)
             .then((res) => {
               setNewReviews(res.data);
+            }).catch((err) => {
+              console.log(err);
             });
+        }).catch((err) => {
+          console.log(err);
         });
       })
       .catch((err) => {
@@ -323,7 +349,7 @@ export default function reviews() {
                     <>
                       <SwiperSlide className="centered-card" key={review.id}>
                         <img
-                          src={review.item.image}
+                          src={DOMPurify.sanitize(review.item.image)}
                           alt=""
                           className="reviewImg"
                         />

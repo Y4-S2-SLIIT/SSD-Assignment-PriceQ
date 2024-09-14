@@ -26,6 +26,7 @@ import "../../styles/randula/dashboard.css";
 import Brands from "../../assets/data/brand.json";
 import Colors from "../../assets/data/color.json";
 import Types from "../../assets/data/type.json";
+import DOMPurify from "dompurify";
 
 function ItemsMain() {
   const navigate = useNavigate();
@@ -82,6 +83,8 @@ function ItemsMain() {
             count: res.data[key],
           }));
           setBrandList(BrandCountCheck);
+        }).catch((err) => {
+          console.log(err);
         });
 
       axios
@@ -92,6 +95,8 @@ function ItemsMain() {
             count: res.data[key],
           }));
           setColorList(ColorCountCheck);
+        }).catch((err) => {
+          console.log(err);
         });
 
       axios
@@ -102,6 +107,8 @@ function ItemsMain() {
             count: res.data[key],
           }));
           setTypeList(TypeCountCheck);
+        }).catch((err) => {
+          console.log(err);
         });
     } catch (error) {
       console.error("Error fetching items:", error);
@@ -229,6 +236,8 @@ function ItemsMain() {
             setItem({});
             getAllItems();
             setIsSubmitted(false);
+          }).catch((err) => {
+            console.log(err);
           });
         })
         .catch((err) => {
@@ -239,6 +248,8 @@ function ItemsMain() {
             text: "Something went wrong!",
           });
         });
+    }).catch((err) => {
+      console.log(err);
     });
   }
 
@@ -261,6 +272,8 @@ function ItemsMain() {
               timer: 1500,
             }).then(() => {
               getAllItems();
+            }).catch((err) => {
+              console.log(err);
             });
           })
           .catch((err) => {
@@ -272,6 +285,8 @@ function ItemsMain() {
             });
           });
       }
+    }).catch((err) => {
+      console.log(err);
     });
   }
 
@@ -364,7 +379,7 @@ function ItemsMain() {
 
             <Col>
               <img
-                src={item.image}
+                src={DOMPurify.sanitize(item.image)}
                 alt="item image"
                 style={{ maxHeight: "15rem" }}
               />
@@ -372,13 +387,13 @@ function ItemsMain() {
               <br />
               <h5>Bar Code</h5>
               <img
-                src={item.barcode}
+                src={DOMPurify.sanitize(item.barcode)}
                 alt="item image"
                 style={{ maxWidth: "25rem" }}
               />
               <br />
               <br />
-              <Button variant="primary" target="_blank" href={item.barcode}>
+              <Button variant="primary" target="_blank" href={DOMPurify.sanitize(item.barcode)}>
                 View Barcode
               </Button>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -916,9 +931,7 @@ function ItemsMain() {
                 <>
                   {allItems
                     .filter((val) => {
-                      if (searchTerm === "") {
-                        return val;
-                      } else if (
+                      if (searchTerm === "" ||
                         val.name
                           .toLowerCase()
                           .includes(searchTerm.toLowerCase()) ||

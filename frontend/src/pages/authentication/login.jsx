@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/sudul/Login.css";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -9,10 +9,26 @@ import Swal from "sweetalert2";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
+import { gapi } from 'gapi-script';
+
 import loginImage from "../../assets/images/login-vector.webp";
+
+import GoogleLoginButton from "../../components/GoogleLoginButton";
 
 function Login() {
   const [isLoading, setIsLoading] = useState(false);
+
+  const clientId = '754594652411-eljf987jpne2fuo9erd8o440bqal3d4b.apps.googleusercontent.com'
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: ""
+      })
+    }
+    gapi.load('client:auth2', start)
+  }, [])
 
   const loginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Required"),
@@ -140,6 +156,10 @@ function Login() {
             )}
           </Formik>
         </Row>
+        <Row className='mt-4'>
+          <GoogleLoginButton />
+        </Row>
+
         <br />
         <div>
           New User? <a href="./register">Register</a>

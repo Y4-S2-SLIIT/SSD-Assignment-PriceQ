@@ -55,10 +55,11 @@ function Register() {
       const data = {
         firstName: values.firstName,
         lastName: values.lastName,
-        email: values.email,
+        email: values.email.toLowerCase(),
         contactNo: values.contactNo,
         password: values.password,
         image: url,
+        isoAuth: false,
       };
       await axios
         .post(`${import.meta.env.VITE_BACKEND_URL}/user/`, data)

@@ -26,4 +26,5 @@ public class User {
     private String contactNo;
     private String image;
     private String password;
+    private Boolean isoAuth;
 }

@@ -30,6 +30,8 @@ function MSRPGenerator() {
       const imgData = canvas.toDataURL('image/jpeg');
       pdf.addImage(imgData, 'JPEG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
       pdf.save(`msrp_report_id_${itemID}.pdf`);
+    }).catch((err) => {
+      console.log(err);
     });
   }
   
@@ -66,6 +68,8 @@ function MSRPGenerator() {
         if (res.isConfirmed) {
           window.location.reload();
         }
+      }).catch((err) => {
+        console.log(err);
       });
     } catch (error) {
       Swal.fire({
@@ -96,6 +100,8 @@ function MSRPGenerator() {
         if (res.isConfirmed) {
           window.location.reload();
         }
+      }).catch((err) => {
+        console.log(err);
       });
     } catch (error) {
       Swal.fire({
@@ -125,6 +131,8 @@ function MSRPGenerator() {
         if (res.isConfirmed) {
           window.location.reload();
         }
+      }).catch((err) => {
+        console.log(err);
       });
       console.error("Error :", error);
     }

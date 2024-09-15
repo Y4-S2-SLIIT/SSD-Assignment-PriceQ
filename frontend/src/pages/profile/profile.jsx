@@ -1,4 +1,5 @@
 import axios from "axios";
+import DOMPurify from 'dompurify';
 import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -98,6 +99,8 @@ export default function profile() {
             timer: 1500,
           }).then(() => {
             window.location.reload();
+          }).catch((err) => {
+            console.log(err);
           });
         })
         .catch((err) => {
@@ -108,6 +111,8 @@ export default function profile() {
             text: "Something is wrong !!",
           });
         });
+    }).catch((err) => {
+      console.log(err);
     });
   }
 
@@ -129,6 +134,8 @@ export default function profile() {
           timer: 1500,
         }).then(() => {
           window.location.reload();
+        }).catch((err) => {
+          console.log(err);
         });
       })
       .catch((err) => {
@@ -176,6 +183,8 @@ export default function profile() {
             }).then(() => {
               sessionStorage.clear();
               window.location.href = "/";
+            }).catch((err) => {
+              console.log(err);
             });
           })
           .catch((err) => {
@@ -187,6 +196,8 @@ export default function profile() {
             });
           });
       }
+    }).catch((err) => {
+      console.log(err);
     });
   }
 
@@ -472,7 +483,7 @@ export default function profile() {
         <Row>
           <Col className="colmn1" sm={6}>
             <img
-              src={user.image}
+              src={DOMPurify.sanitize(user.image)}
               className="userImg"
               alt="user image"
               loading=" lazy"

@@ -39,10 +39,8 @@ export default function barcodegenerator() {
 
   async function handleBarcodeSave() {
     setIsSubmitted(true);
-    //get barcode as an image
     const barcodeImage = await generateBarcodeImage();
 
-    //convert base64 to blob
     const byteString = atob(barcodeImage.split(",")[1]);
     const mimeString = barcodeImage.split(",")[0].split(":")[1].split(";")[0];
     const ab = new ArrayBuffer(byteString.length);
@@ -52,7 +50,6 @@ export default function barcodegenerator() {
     }
     const blob = new Blob([ab], { type: mimeString });
 
-    //upload image to firebase
     const storageRef = ref(storage, `barcode/${itemID + v4()}`);
     await uploadBytes(storageRef, blob)
       .then(() => {
@@ -62,12 +59,8 @@ export default function barcodegenerator() {
         console.error("Error uploading barcode image:", error);
       });
 
-    //get image url and update item details
     await getDownloadURL(storageRef)
       .then(async (url) => {
-        console.log("Barcode Image URL:", url);
-        //update item details
-
         const data = {
           barcode: url,
         };

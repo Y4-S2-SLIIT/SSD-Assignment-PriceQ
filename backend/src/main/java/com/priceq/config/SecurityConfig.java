@@ -20,7 +20,7 @@ public class SecurityConfig {
                         )
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().authenticated()  // Ensure all requests are authenticated
+                        .anyRequest().permitAll()  // Ensure all requests are authenticated
                 );
 
         return http.build();

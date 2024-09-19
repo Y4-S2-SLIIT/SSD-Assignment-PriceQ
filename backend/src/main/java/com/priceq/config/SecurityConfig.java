@@ -11,8 +11,9 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf(csrf -> csrf.disable())  
                 .headers(headers -> headers
-                        .frameOptions(frameOptions -> frameOptions.deny())
+                        .frameOptions(frameOptions -> frameOptions.deny())  // Prevent Clickjacking
                         .httpStrictTransportSecurity(hsts -> hsts  // Enable HSTS
                                 .includeSubDomains(true)
                                 .maxAgeInSeconds(31536000)
@@ -20,7 +21,7 @@ public class SecurityConfig {
                         )
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .anyRequest().authenticated()  // Ensure all requests are authenticated
+                        .anyRequest().permitAll()  
                 );
 
         return http.build();

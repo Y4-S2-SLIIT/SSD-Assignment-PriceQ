@@ -27,7 +27,7 @@ public class UserController {
         if(responseBody == body) {
             return ResponseEntity.status(HttpStatus.CREATED).body(responseBody);
         }else{
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new User());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
 

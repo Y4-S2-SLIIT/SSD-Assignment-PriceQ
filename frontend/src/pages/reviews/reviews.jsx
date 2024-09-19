@@ -16,6 +16,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import DOMPurify from "dompurify";
 
 import axios from "axios";
 
@@ -88,8 +89,8 @@ export default function reviews() {
           count: res.data[key],
         }));
         setReviewCount(reviewCountCheck);
-        console.log(reviewCountCheck);
-        console.log(reviewCount);
+        // console.log(reviewCountCheck);
+        // console.log(reviewCount);
       }).catch((err) => {
         console.log(err);
       });
@@ -345,9 +346,9 @@ export default function reviews() {
                 </>
               ) : (
                 <>
-                  {newReviews.map((review) => (
+                  {newReviews.map((review, index) => (
                     <>
-                      <SwiperSlide className="centered-card" key={review.id}>
+                      <SwiperSlide className="centered-card" key={index}>
                         <img
                           src={DOMPurify.sanitize(review.item.image)}
                           alt=""
@@ -409,11 +410,11 @@ export default function reviews() {
               </>
             ) : (
               <>
-                {reviews.map((review) => (
+                {reviews.map((review, index) => (
                   <>
                     <Card
                       style={{ width: "13rem", marginTop: "1rem" }}
-                      key={review.id}
+                      key={index}
                       data-tooltip-id={review.id}
                     >
                       <Card.Img
@@ -514,11 +515,10 @@ export default function reviews() {
                   <Field
                     name="description"
                     id="description"
-                    className={`form-control ${
-                      touched.description && errors.description
-                        ? "is-invalid"
-                        : ""
-                    }`}
+                    className={`form-control ${touched.description && errors.description
+                      ? "is-invalid"
+                      : ""
+                      }`}
                   />
                   <div className="invalid-feedback">
                     {touched.description && errors.description
@@ -631,11 +631,10 @@ export default function reviews() {
                   <Field
                     name="description"
                     id="description"
-                    className={`form-control ${
-                      touched.description && errors.description
-                        ? "is-invalid"
-                        : ""
-                    }`}
+                    className={`form-control ${touched.description && errors.description
+                      ? "is-invalid"
+                      : ""
+                      }`}
                   />
                   <div className="invalid-feedback">
                     {touched.description && errors.description
